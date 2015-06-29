@@ -1,26 +1,31 @@
-@import 'reset';
 
-// Создаем mixin
-@mixin respond-to($media) {
-  @if $media == handhelds {
-    @media only screen and (max-width: 479px) { @content; }
-  }
-  @else if $media == wide-handhelds {
-    @media only screen and (min-width: 480px) and (max-width: 767px) { @content; }
-  }
-  @else if $media == tablets {
-    @media only screen and (min-width: 768px) and (max-width: 959px) { @content; }
-  }
+$color:#333;
+$font:Tahoma, Geneva, sans-serif;
+$fsize:1em;
+
+ul li {
+	list-style-type:none;
+	list-style-image:url(../img/arrow.png);
+	margin-bottom:$fsize - 0.5em;
+}
+a {
+	text-decoration:none;
+	color:$color;	
+	font-family:$font;
+	font-size:$fsize;
+	font-weight:600; 
+}
+a:hover {
+	color:$color+#666;	
 }
 
-.menu-main {
-  float: left;
-  width: 300px;
+h1{
+	font-family:$font;
+	text-transform:uppercase;
+	color:$color;	
+}
 
-  // Для телефонов
-  @include respond-to(handhelds) { float: none; };
-  // Для телефонов с широким экраном
-  @include respond-to(wide-handhelds) { float: none; };
-  // Для планшетов
-  @include respond-to(tablets) { width: 240px; };
+h6{
+	font-family:$font;
+	color:$color*4;	
 }
