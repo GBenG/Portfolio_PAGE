@@ -1,3 +1,5 @@
+@import 'reset';
+
 // Создаем mixin
 @mixin respond-to($media) {
   @if $media == handhelds {
