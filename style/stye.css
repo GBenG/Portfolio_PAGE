@@ -1,0 +1,14 @@
+.menu-main {
+  float: left;
+  width: 300px; }
+  @media only screen and (max-width: 479px) {
+    .menu-main {
+      float: none; } }
+  @media only screen and (min-width: 480px) and (max-width: 767px) {
+    .menu-main {
+      float: none; } }
+  @media only screen and (min-width: 768px) and (max-width: 959px) {
+    .menu-main {
+      width: 240px; } }
+
+/*# sourceMappingURL=stye.css.map */

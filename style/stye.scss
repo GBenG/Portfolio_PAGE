@@ -1,0 +1,24 @@
+// Создаем mixin
+@mixin respond-to($media) {
+  @if $media == handhelds {
+    @media only screen and (max-width: 479px) { @content; }
+  }
+  @else if $media == wide-handhelds {
+    @media only screen and (min-width: 480px) and (max-width: 767px) { @content; }
+  }
+  @else if $media == tablets {
+    @media only screen and (min-width: 768px) and (max-width: 959px) { @content; }
+  }
+}
+
+.menu-main {
+  float: left;
+  width: 300px;
+
+  // Для телефонов
+  @include respond-to(handhelds) { float: none; };
+  // Для телефонов с широким экраном
+  @include respond-to(wide-handhelds) { float: none; };
+  // Для планшетов
+  @include respond-to(tablets) { width: 240px; };
+}
