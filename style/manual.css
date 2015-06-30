@@ -1,3 +1,7 @@
+.headr{
+	position:relative;	
+}
+
 .fio{
 	display:block;
 	position:relative;
@@ -18,4 +22,8 @@
 
 .fio h1{
 	font-size:3em;
+}
+
+.img-thumbnail {
+	margin-bottom:1em;	
 }
